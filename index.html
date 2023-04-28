@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Product</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <a href="./index.html" class="header__logo">
+                <img src="./assets/img/logo/pngimg.com - nike_PNG18.png" alt="logo">
+                <span class="header__logo__name">Nike</span>
+            </a>
+            <div class="header__menu">
+                <ul class="header__menu__list">
+                    <li class="header__menu__item"><a href="./index.html">HOME</a></li>
+                    <li class="header__menu__item"><a href="#">ABOUT</a></li>
+                    <li class="header__menu__item"><a href="./bill.html">BILLS</a></li>
+                </ul>
+                <div class="header__menu__cart">
+                    <i onclick="openCart()" class="fa-solid fa-cart-shopping"></i>
+                    <span class="header__menu__cart__quantity"></span>
+                </div>
+            </div>
+            <!-- on mobile -->
+            <div class="header__menu__mobile">
+                <div class="header__menu__mobile__cart">
+                    <i onclick="openCart()" class="fa-solid fa-cart-shopping"></i>
+                    <span class="header__menu__mobile__cart__quantity header__menu__cart__quantity"></span>
+                </div>
+                <div class="header__menu__mobile__nav">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="header__menu__mobile__nav__list">
+                        <li class="header__menu__mobile__nav__list__item"><a href="./index.html">HOME</a></li>
+                        <li class="header__menu__mobile__nav__list__item"><a href="#">ABOUT</a></li>
+                        <li class="header__menu__mobile__nav__list__item"><a href="./bill.html">BILLS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- on mobile -->
+        </header>
+        <div class="product">
+            <!-- item  -->
+
+
+        </div>
+        <div class="cart hide">
+            <img class="cart__img hide" src="./assets/img/empty/empty-cart.png" alt="">
+            <span onclick="backToHome()" class="cart__backBtn__temp hide">
+                <i class="fa-solid fa-backward"></i>
+                Back to Shopping
+            </span>
+            <table>
+
+            </table>
+            <div class="cart__btn hide">
+                <span onclick="backToHome()" class="cart__backBtn">
+                    <i class="fa-solid fa-backward"></i>
+                    Back to Shopping
+                </span>
+                <div class="cart__buy">
+                    <div class="cart__buy__wrap">
+                        <span class="cart__buy__wrap__total">Total: $<span>0</span></span>
+                        <button onclick="handleBuy()" class="cart__buy__wrap__btn">Buy</button>
+                    </div>
+                </div>
+
+                <div class="form__wrap hide">
+                    <!-- form  -->
+                    <form class="form" action="">
+                        <div class="form__header">
+                            <h1 class="title">Thông tin người mua</h1>
+                            <span onclick="exitForm()" class="form__close">&times;</span>
+                        </div>
+                        <div class="form__infoUser">
+                            <div class="form__infoUser__nameInp">
+                                <label class="form__infoUser__nameInp__title">Họ và tên</label>
+                                <div class="form__infoUser__nameInp__inp">
+                                    <input class="surnameInp" type="text" placeholder="Họ"> <span
+                                        class="errSurname"></span>
+                                    <input class="nameInp" type="text" placeholder="Tên"> <span class="errName"></span>
+                                </div>
+                            </div>
+                            <div class="form__infoUser__email">
+                                <label class="form__infoUser__email__title">Email</label>
+                                <input class="emailInp" type="email" placeholder="Email"> <span
+                                    class="errEmail errorSpan"></span>
+                            </div>
+                            <div class="form__infoUser__telephone">
+                                <label class="form__infoUser__telephone__title">Số điện thoại</label>
+                                <input class="telInp" type="tel" placeholder="Số điện thoại"> <span
+                                    class="errTel errorSpan"></span>
+                            </div>
+                            <div class="form__infoUser__address">
+                                <label class="form__infoUser__address__title">Địa chỉ</label>
+                                <div class="form__infoUser__address__select">
+                                    <select name="" id="province">
+                                        <option selected value="">--Chọn Tỉnh/ Thành phố--</option>
+                                    </select>
+                                    <span class="errProvince"></span>
+                                    <select name="" id="district">
+                                        <option selected value="">--Chọn Huyện/Quận--</option>
+                                    </select>
+                                    <span class="errDistrict"></span>
+                                    <select name="" id="ward">
+                                        <option selected value="">--Chọn Phường/Xã--</option>
+                                    </select>
+                                    <span class="errWard"></span>
+                                </div>
+                            </div>
+                            <div class="inpBox">
+                                <input class="homeNumInp" type="text" placeholder="Số nhà"> <span
+                                    class="errHomeNum errorSpan"></span>
+                            </div>
+                            <div class="form__infoUser__message">
+                                <label class="form__infoUser__message__title">Lời nhắn</label>
+                                <textarea name="" id="message" cols="30" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__infoUser__btn">
+                            <span onclick="exitForm()" class="exit">Hủy</span>
+                            <span onclick="handleCreateBill()" class="submit">Xác nhận</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            
+        </div>
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <h3>Ni<span>ke</span></h3>
+                <p class="footer-links">
+                    <a href="#" class="link-1">Home</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">About</a>
+                    <a href="#">Faq</a>
+                    <a href="#">Contact</a>
+                </p>
+                <p class="footer-company-name">Company Nike © 2023</p>
+            </div>
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+1.555.555.5555</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">support@company.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu
+                    auctor lacus vehicula sit amet.
+                </p>
+                <div class="footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="./assets/js/short.js"></script>
+    <script src="./assets/js/storage.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/cartProduct.js"></script>
+    <script src="./assets/js/Product.js"></script>
+    <script src="./assets/js/validate.js"></script>
+    <script src="./assets/js/randomId.js"></script>
+    <script src="./assets/js/handleBuy.js"></script>
+    <script src="./assets/js/handleNavMobile.js"></script>
+</body>
+
+</html>

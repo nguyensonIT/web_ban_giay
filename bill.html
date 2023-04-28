@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cart Bill</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <a href="./index.html" class="header__logo">
+                <img src="./assets/img/logo/pngimg.com - nike_PNG18.png" alt="logo">
+                <span class="header__logo__name">Nike</span>
+            </a>
+            <div class="header__menu">
+                <ul class="header__menu__list">
+                    <li class="header__menu__item"><a href="./index.html">HOME</a></li>
+                    <li class="header__menu__item"><a href="#">ABOUT</a></li>
+                    <li class="header__menu__item"><a href="./bill.html">BILLS</a></li>
+                </ul>
+                
+            </div>
+             <!-- on mobile -->
+             <div class="header__menu__mobile">
+                <div class="header__menu__mobile__nav">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="header__menu__mobile__nav__list">
+                        <li class="header__menu__mobile__nav__list__item"><a href="./index.html">HOME</a></li>
+                        <li class="header__menu__mobile__nav__list__item"><a href="#">ABOUT</a></li>
+                        <li class="header__menu__mobile__nav__list__item"><a href="./bill.html">BILLS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- on mobile -->
+        </header>
+        <div class="img__empty">
+            <p class="img__empty">Chưa có đơn hàng nào!</p>
+        </div>
+        <table class="table__bill hide">
+            <tr class="table__bill__title">
+                <th>Code</th>
+                <th>Customer Name</th>
+                <th>Date</th>
+                <th>Item Numbers</th>
+                <th>Total Quantity</th>
+                <th>Total Price</th>
+                <th>Return</th>
+            </tr>
+            
+        </table>
+        <div class="btn__bill">
+            <a href="./index.html" class="cart__backBtn cart__backBtn__bill">
+                <i class="fa-solid fa-backward"></i>
+                Back to Shopping
+            </a>
+        </div>
+
+        <!-- Bill Detail Product  -->
+        <div class="product__detail__bill hide">
+            <span onclick="closeDetail()" class="product__detail__bill__close">&times;</span>
+            <table class="product__detail__bill__table">
+                <caption>Thông tin đơn hàng</caption>
+                <tr class="product__detail__bill__table__title">
+                    <th class="product__detail__bill__table__title1">Picture product</th>
+                    <th>Name product</th>
+                    <th>Quantity product</th>
+                    <th>Price product</th>
+                </tr>
+                <!-- item  -->
+                
+                
+            </table>
+        </div>
+    </div>
+    <script src="./assets/js/handleBill.js"></script>
+    <script src="./assets/js/handleNavMobile.js"></script>
+</body>
+</html>

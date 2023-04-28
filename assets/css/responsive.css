@@ -1,0 +1,306 @@
+/* Mobile */
+@media only screen and (max-width : 739px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header {
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .header__menu__mobile {
+        display: flex;
+        font-size: 22px;
+    }
+
+    .header__menu__mobile__nav {
+        margin-left: 20px;
+    }
+
+    .header__menu__mobile__cart {
+        position: relative;
+    }
+
+    .header__menu__mobile__nav {
+        position: relative;
+    }
+
+    .header__menu__mobile__nav__list {
+        position: absolute;
+        background-color: #fff;
+        font-size: 16px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+        padding: 5px;
+        transition: .5s;
+        border-radius: 5px;
+        top: 50px;
+        right: 0;
+        transform: scale3d(0, 1, 0);
+    }
+
+    .header__menu__mobile__nav__list.slideLeft {
+        transform: scale3d(1, 1, 1);
+    }
+
+    .header__menu__mobile__nav__list__item {
+        list-style: none;
+        border-bottom: 1px solid #aaa;
+        margin: 10px 5px;
+        padding: 5px;
+    }
+
+    /* product  */
+    .product__item {
+        width: 48%;
+    }
+
+    .product__item__addcart {
+        width: 35px;
+        height: 35px;
+        right: 5px;
+        bottom: 90px;
+    }
+
+    /* cart  */
+    .cart__img {
+        width: 100%;
+    }
+
+    .cart__backBtn__temp {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header__row {
+        font-size: 12px;
+    }
+
+    .product__row {
+        font-size: 12px;
+    }
+
+    .product__row td img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .product__row__info {
+        margin-left: 15px;
+    }
+
+    .product__row__info__name {
+        font-size: 12px;
+    }
+
+    .product__row__info__quantity {
+        font-size: 8px;
+    }
+
+    tr td:nth-child(5n+2) {
+        font-size: 14px;
+    }
+
+    .cart__buy__wrap {
+        margin-right: unset;
+    }
+
+    .cart__backBtn {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .cart__buy__wrap__btn {
+        padding: 10px;
+    }
+
+    .wrap__overlay__box {
+        padding: unset;
+        margin-top: 15%;
+    }
+
+    .wrap__overlay__box__title {
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding-top: 28px;
+    }
+
+    /* .wrap__overlay__box__btn {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    } */
+
+    .wrap__overlay__box__btn__exit,
+    .wrap__overlay__box__btn__accept {
+        padding: 4px 5px;
+        font-size: 14px;
+    }
+
+    /* form  */
+    form {
+        width: unset;
+    }
+
+    .form__header .title {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .errSurname,
+    .errName,
+    .errTel,
+    .errEmail,
+    .errDistrict,
+    .errWard,
+    .errProvince {
+        font-size: 10px;
+    }
+
+    select {
+        font-size: 10px;
+    }
+
+    .table__bill__title,
+    .table__bill__product__box,
+    .table__bill__product__name,
+    .table__bill__product__date,
+    .table__bill__product__numItem,
+    .table__bill__product__totalQntItem {
+        font-size: 8px;
+    }
+    /* detail */
+    .product__detail__bill__table{
+        width: 100%;
+        padding: unset;
+    }
+    .product__detail__bill__table__title{
+        font-size: 12px;
+    }
+    .product__detail__bill__table__content__img{
+        width: 60px;
+        height: 60px;
+    }
+    .product__detail__bill__table__content__quantity,
+    .product__detail__bill__table__content__price{
+        font-size: 12px;
+    }
+    .product__detail__bill__close{
+        top: 55px;
+        right: 0;
+        font-size: 50px;
+        z-index: 1;
+    }
+
+}
+
+/* Tablet */
+@media only screen and (min-width : 740px) and (max-width : 1023px) {
+    .header__menu__mobile {
+        display: none;
+    }
+
+
+    .product {
+        width: 90%;
+        justify-content: unset;
+    }
+
+    .product__item {
+        margin: 0 8px 8px;
+        width: calc(100% / 3 - 16px);
+    }
+
+    .header__row {
+        font-size: 12px;
+    }
+
+    .product__row {
+        font-size: 14px;
+    }
+
+    .product__row__info__name {
+        font-size: 16px;
+    }
+
+    .product__row__info__quantity {
+        font-size: 12px;
+    }
+
+    tr td:nth-child(5n+2) {
+        font-size: 16px;
+    }
+
+    .cart__buy__wrap {
+        margin-right: unset;
+    }
+
+    .cart__backBtn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .cart__buy__wrap__btn {
+        padding: 10px 15px;
+    }
+
+    form input {
+        padding: 8px;
+    }
+
+    select {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .form__header .title {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .errSurname,
+    .errName,
+    .errTel,
+    .errEmail,
+    .errDistrict,
+    .errWard,
+    .errProvince {
+        font-size: 8px;
+    }
+
+    .errName {
+        right: calc(50% - 60px);
+    }
+
+    /* bill  */
+    table::after {
+        top: 70px;
+    }
+
+    .table__bill__title {
+        font-size: 15px;
+    }
+
+    .product__detail__bill__table__title {
+        font-size: 15px;
+    }
+
+    .product__detail__bill__table__content__img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+    .header__menu__mobile {
+        display: none;
+    }
+}
